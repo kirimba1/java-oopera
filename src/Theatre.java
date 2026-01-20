@@ -18,8 +18,13 @@ public class Theatre {
         Director director2 = new Director();
         director2.setName("Джеффри"); director2.setSurname("Симонс");
 
-        String musicAuthor = "Чайковский";
-        String choreographer = "Мариус Петипа";
+        Person choreographer = new Person();
+        choreographer.setName("Мариус");
+        choreographer.setSurname("Петипа");
+
+        Person musicAuthor = new Person();
+        musicAuthor.setName("Чайковский");
+
         String librettoOpera = """
         ЕВГЕНИЙ ОНЕГИН
         П.И. Чайковский

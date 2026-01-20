@@ -2,6 +2,17 @@ import java.util.Objects;
 
 public class Actor extends Person {
 
+    private double height;
+    private int heightInt = (int) (getHeight() * 10);
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
     @Override
     public String toString() {
         String genderStr = getGender() == Person.Gender.MALE ? "мужчина" : "женщина";
@@ -20,7 +31,6 @@ public class Actor extends Person {
 
     @Override
     public int hashCode() {
-        int heightInt = (int) (getHeight() * 10);
         return Objects.hash(getName(), getSurname(), heightInt, getGender());
     }
 }
